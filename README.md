@@ -78,14 +78,19 @@ This configuration allows Airflow to connect to the PostgreSQL database running 
 
 ## Customization for Other APIs
 This project is designed to be flexible and can be adapted to extract data from other APIs by modifying the `web_extract` function and adjusting the transformation logic as needed.
+
 ### Steps to Customize:
+
 1. Modify the `web_extract` Function:
+
     * Change the `url` in the `web_extract` function to point to the desired API endpoint.
     * Update any headers or parameters required for the new API.
 2. Adjust the data_transformation Function:
+
     Customize the transformation logic to match the structure of the new data. Remove unnecessary columns, handle missing values, and perform any additional data transformations as needed.
 
 3. Update the load_into_postgres Function:
+
     Modify the target table and schema names in the load_into_postgres function to reflect the new data structure.
 
 ### Example Use Cases
