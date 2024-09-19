@@ -84,14 +84,16 @@ This project is designed to be flexible and can be adapted to extract data from 
     * Update any headers or parameters required for the new API.
 2. Adjust the data_transformation Function:
     Customize the transformation logic to match the structure of the new data. Remove unnecessary columns, handle missing values, and perform any additional data transformations as needed.
+
 3. Update the load_into_postgres Function:
     Modify the target table and schema names in the load_into_postgres function to reflect the new data structure.
+
 ### Example Use Cases
 * Anime Data Analysis: Analyze trends in anime genres, ratings, and popularity over different seasons.
 * Custom API Data Ingestion: Collect and transform data from various APIs for analytical or reporting purposes.
 
 ## Docker Compose Configuration
-The provided docker-compose.yaml sets up the following services:
+The provided [docker-compose.yaml](ETL-2-Pandas-Postgres/docker-compose.yaml) sets up the following services:
 1. Airflow Scheduler & Web Server: Manages and schedules DAGs.
 2. Airflow Worker: Executes the tasks defined in the DAG.
 3. PostgreSQL: Stores the transformed data.
